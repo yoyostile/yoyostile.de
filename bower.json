@@ -1,0 +1,30 @@
+{
+  "name": "yoyostile",
+  "version": "0.0.1",
+  "homepage": "http://www.yoyostile.de/",
+  "authors": [
+    "Johannes Heck <yoyostile@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "private"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/bower_components",
+    ".sass-cache",
+    "test",
+    "tests",
+    "_site",
+    "node_modules"
+  ],
+  "dependencies": {
+    "fontawesome": ">= 4.3",
+    "uikit": "~2.21.0"
+  }
+}
