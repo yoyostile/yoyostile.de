@@ -48,7 +48,7 @@
 # end
 
 # Use LiveReload
-activate :livereload
+# activate :livereload
 
 # Compass configuration
 set :css_dir, 'stylesheets'
