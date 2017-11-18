@@ -10,7 +10,6 @@ pipeline:
     secrets: [registry.gitlab.com]
     when:
       event: push
-      branch: [master]
 
   test:
     image: alpine
@@ -19,4 +18,4 @@ pipeline:
       - cat /etc/resolv.conf
       - ping -c 1 github.com
     when:
-      event: [failure, success]
+      status: [failure, success]
