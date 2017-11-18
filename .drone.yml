@@ -11,3 +11,12 @@ pipeline:
     when:
       event: push
       branch: [master]
+
+  test:
+    image: alpine
+    commands:
+      - cat /etc/hosts
+      - cat /etc/resolv.conf
+      - ping -c 1 github.com
+    when:
+      event: [failure, success]
