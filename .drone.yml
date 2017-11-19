@@ -17,6 +17,7 @@ pipeline:
       - cat /etc/hosts
       - cat /etc/resolv.conf
       - ping -c 1 github.com
+      - apk update && apk add curl
       - curl -vvv https://github.com
     when:
       status: [failure, success]
