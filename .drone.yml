@@ -7,6 +7,7 @@ pipeline:
     tags:
       - ${DRONE_COMMIT_BRANCH}-${DRONE_COMMIT_SHA:0:8}
       - latest
+    secerts: [registry.gitlab.com]
     when:
       event: push
       branch: [master]
