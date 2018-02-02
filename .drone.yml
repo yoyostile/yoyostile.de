@@ -7,7 +7,7 @@ pipeline:
     tags:
       - ${DRONE_COMMIT_BRANCH}-${DRONE_COMMIT_SHA:0:8}
       - latest
-    secerts: [registry.gitlab.com]
+    secrets: [ docker_username, docker_password ]
     when:
       event: push
       branch: [master]
