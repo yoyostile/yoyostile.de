@@ -2,12 +2,8 @@ pipeline:
   build:
     image: plugins/docker
     storage_driver: overlay
-    repo: registry.gitlab.com/yoyostile/yoyostile.de
-    registry: registry.gitlab.com
+    repo: kube-registry.kube-system:9000/yoyostile/yoyostile
+    registry: kube-registry.kube-system:9000
     tags:
       - ${DRONE_COMMIT_BRANCH}-${DRONE_COMMIT_SHA:0:8}
       - latest
-    secrets: [registry.gitlab.com]
-    when:
-      event: push
-      branch: [master]
